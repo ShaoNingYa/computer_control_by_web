@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.js"></script>
+    <style>
+        html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+            margin: 0;
+            padding: 0;
+            /*overflow: hidden;*/
+        }
+
+        #pic-show {
+            width: 100%;
+            height: 100%;
+            /*background: url("cut.png") no-repeat;*/
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+<img id="pic-show" src="cut.png" alt="">
+</body>
+<script>
+    $("#pic-show").click(function (e) {
+        console.log(e.pageX/$(this).width(), e.pageY/$(this).height())
+    })
+    // var id = setInterval(function(){
+    //     $.get("reload_pic",function(){
+    //         $("img").attr("src",PicArr[CurrPic]);
+    //     });
+    // }, 600)
+</script>
+</html>
